@@ -1,0 +1,152 @@
+#!/bin/bash
+
+# Color variables
+txtblk='\e[0;30m' # Black - Regular
+txtred='\e[0;31m' # Red
+txtgrn='\e[0;32m' # Green
+txtylw='\e[0;33m' # Yellow
+txtblu='\e[0;34m' # Blue
+txtpur='\e[0;35m' # Purple
+txtcyn='\e[0;36m' # Cyan
+txtwht='\e[0;37m' # White
+txtrst='\e[0m'    # Text Reset
+
+# Function to get terminal size
+get_terminal_size() {
+    terminal_width=$(tput cols)
+    terminal_height=$(tput lines)
+}
+
+# Import the time plugin script
+source ./time_plugin.sh
+
+# Function to display menu
+display_menu() {
+    get_terminal_size
+    clear
+    echo -e "${txtgrn}Simple Text Editor +Vim${txtrst}"
+    echo ""
+    echo -e "${txtgrn}1. Create a new file${txtrst}"
+    echo -e "${txtgrn}2. Open an existing file${txtrst}"
+    echo -e "${txtgrn}3. Edit existing file${txtrst}"
+    echo -e "${txtgrn}4. Save file${txtrst}"
+    echo -e "${txtgrn}5. Save As${txtrst}"
+    echo -e "${txtgrn}6. Search for a word${txtrst}"
+    echo -e "${txtgrn}7. Replace a word${txtrst}"
+    echo -e "${txtgrn}8. Word Count${txtrst}"
+    echo -e "${txtred}9. Delete a file${txtrst}"
+    echo -e "${txtred}10. Time${txtrst}"
+    echo -e "${txtred}11. Exit${txtrst}"
+    echo "--------------------------------------------------------------------------------"
+}
+
+# Function to create a new file
+create_new_file() {
+    echo "Enter the filename or full path of the new file:"
+    read filenamepath
+    vim "$filenamepath"
+}
+
+# Function to open an existing file
+open_existing_file() {
+    echo "Enter the filename or full path of the file to open:"
+    read filenamepath
+    vim "$filenamepath"
+}
+
+# Function to edit an existing file
+edit_existing_file() {
+    echo "Enter the filename or filepath of the file to edit:"
+    read filenamepath
+    vim "$filenamepath"
+}
+
+# Function to save the current file
+save_file() {
+    echo "You are using Vim. Please use Vim commands to save the file."
+}
+
+# Function to save the current file with a new name
+save_as() {
+    echo "You are using Vim. Please use Vim commands to save the file with a new name."
+}
+
+# Function to delete a file
+delete_file() {
+    echo "Enter the name of the file to delete:"
+    read filename
+    if [ -f "$filename" ]; then
+        rm "$filename"
+        echo "File deleted."
+    else
+        echo "File not found."
+    fi
+}
+
+# Function to search for a word
+search_word() {
+    echo "You are using Vim. Please use Vim commands to search for a word."
+}
+
+# Function to replace a word
+replace_word() {
+    echo "You are using Vim. Please use Vim commands to replace a word."
+}
+
+# Function to count words
+word_count() {
+    echo "You are using Vim. Please use Vim commands to count words."
+}
+
+# Function to handle time plugin
+handle_time_plugin() {
+    display_current_time
+}
+
+# Main loop
+while true; do
+    display_menu
+
+    read -p "Enter your choice: " choice
+    case $choice in
+        1)
+            create_new_file
+            ;;
+        2)
+            open_existing_file
+            ;;
+        3)
+            edit_existing_file
+            ;;
+        4)
+            save_file
+            ;;
+        5)
+            save_as
+            ;;
+        6)
+            search_word
+            ;;
+        7)
+            replace_word
+            ;;
+        8)
+            word_count
+            ;;
+        9)
+            delete_file
+            ;;
+        10)
+            handle_time_plugin  # Invoke the time plugin function
+            ;;
+        11)
+            echo "Exiting..."
+            exit 0
+            ;;
+        *)
+            echo "Invalid choice. Please try again."
+            ;;
+    esac
+
+    read -p "Press Enter to continue..."
+done
