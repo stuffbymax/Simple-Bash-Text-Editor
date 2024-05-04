@@ -7,17 +7,17 @@ This program is a simple text editor implemented in Bash script. It provides bas
 -
 Here's a brief overview of its functionalities:
 -
-*Create a new file*
-*pen an existing file
-*Edit an existing file
-*Save file
-*Save As
-*Search for a word
-*Replace a word
-*Word Count
-*support plugins
-*Delete a file
-*Exit
+* Create a new file
+* pen an existing file
+* Edit an existing file
+* Save file
+* Save As
+* Search for a word
+* Replace a word
+* Word Count
+* support plugins
+* Delete a file
+* Exit
 
 #Vim Version
 -
@@ -25,16 +25,16 @@ This program also has a Vim version It have same functionalities as the Bash scr
 
 Here's a brief overview of its functionalities:
 -
-*Create a new file
-*pen an existing file
-*Edit an existing file
-*Save file
-*Save As
-*Search for a word
-*Replace a word
-*Word Count
-*support plugins
-*Delete a file
-*Exit
+* Create a new file
+* pen an existing file
+* Edit an existing file
+* Save file
+* Save As
+* Search for a word
+* Replace a word
+* Word Count
+* support plugins
+* Delete a file
+* Exit
 
 
