@@ -30,9 +30,6 @@ Here's a brief overview of its functionalities:
 * Edit an existing file
 * Save file
 * Save As
-* Search for a word
-* Replace a word
-* Word Count
 * support plugins
 * Delete a file
 * Exit
