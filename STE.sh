@@ -113,7 +113,11 @@ edit_existing_file() {
             echo "Editing File: $filenamepath (Press 'q' to save and quit)"
             echo "--------------------------------------------------------------------------------"
             sed -n "$current_line,$((current_line+page_size-1))p" "$filenamepath" | nl -w3 -s'|' -v $current_line  # Add line numbers for editing
-            echo "--------------------------------------------------------------------------------"
+            echo ""
+			echo ""
+			echo ""
+			echo ""
+			echo "--------------------------------------------------------------------------------"
             read -n 1 -s -r key
             case "$key" in
                 q)
