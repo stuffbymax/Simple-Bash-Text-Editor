@@ -2,6 +2,8 @@
 This project aims to provide a simple text editor with basic functionalities like creating, opening, editing, and saving text files.
 -
 
+if plugins doesnt work move the plugins and delete the folder
+-
 
 This program is a simple text editor implemented in Bash script. It provides basic functionalities like creating new files, opening existing files, editing files, saving files, searching for words, replacing words, counting words, and deleting files.
 -
