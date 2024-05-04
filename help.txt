@@ -1,0 +1,13 @@
+
+---------
+q) exit edit mode
+
+e) enter edit mode
+
+j) up
+
+k) down
+
+CTRL +c) exit with out save
+
+

@@ -63,12 +63,20 @@ edit_existing_file() {
 
 # Function to save the current file
 save_file() {
-    echo "You are using Vim. Please use Vim commands to save the file."
+    if [ -n "$filenamepath" ]; then
+        echo "$text" > "$filenamepath"
+        echo "File saved."
+    else
+        echo "No file is currently open."
+    fi
 }
 
 # Function to save the current file with a new name
 save_as() {
-    echo "You are using Vim. Please use Vim commands to save the file with a new name."
+    echo "Enter the name of the file to save as:"
+    read new_filename
+    echo "$text" > "$new_filename"
+    echo "File saved as $new_filename."
 }
 
 # Function to delete a file
@@ -85,7 +93,13 @@ delete_file() {
 
 # Function to search for a word
 search_word() {
-    echo "You are using Vim. Please use Vim commands to search for a word."
+    echo "Enter the word to search for:"
+    read word
+    if [ -n "$word" ]; then
+        echo "$text" | grep -n "$word"
+    else
+        echo "Invalid input."
+    fi
 }
 
 # Function to replace a word
@@ -95,8 +109,9 @@ replace_word() {
 
 # Function to count words
 word_count() {
-    echo "You are using Vim. Please use Vim commands to count words."
+echo "You are using Vim. Please use Vim commands to replace a word."
 }
+
 
 # Function to handle time plugin
 handle_time_plugin() {
