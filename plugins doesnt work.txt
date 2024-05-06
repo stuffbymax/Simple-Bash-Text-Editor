@@ -1,1 +1,0 @@
-if the plugins doesnt work remove the plugins folder and put the files in same directory
