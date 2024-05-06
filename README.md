@@ -21,7 +21,7 @@ Here's a brief overview of its functionalities:
 * Delete a file
 * Exit
 
-#Vim Version
+# Vim Version
 -
 This program also has a Vim version It have same functionalities as the Bash script version but it opens the Vim text editor
 
