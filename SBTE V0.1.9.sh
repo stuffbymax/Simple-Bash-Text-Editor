@@ -48,7 +48,7 @@ display_menu() {
     echo -e "${txtcyn}10. Time${txtrst}"
     echo -e "${txtcyn}11. System Info${txtrst}"
     echo -e "${txtgrn}12. About${txtrst}"
-    echo -e "${txtblu}13. Visit our website${txtrst}"
+    echo -e "${txtblu}13. Visit website${txtrst}"
     echo -e "${txtred}14. Exit${txtrst}"
     echo "--------------------------------------------------------------------------------"
 }
