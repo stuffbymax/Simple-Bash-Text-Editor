@@ -1,13 +1,19 @@
+[ KEYBINDS ]
 
----------
-q) exit edit mode
+Each bind is set with an environment variable 'BED_KEY_<NAME>'. Values for
+the binds are the actual contents the keypress(es) would insert.
 
-e) enter edit mode
-
-j) up
-
-k) down
-
-CTRL +c) exit with out save
-
-
+Name     Default  Description
+----     -------  -----------
+PGUP     pgup     Move up a window's worth of lines
+PGDN     pgdn     Move down a window's worth of lines
+UP       ↑        Move up a line
+DOWN     ↓        Move down a line
+QUIT     q        Exit bed
+FILE     f        Set target file
+READ     r        Read file into the buffer
+WRITE    w        Write buffer into the file
+EDIT     e        Modify current line
+APPEND   a        Append new line, move to it and begin editing
+DELETE   d        Delete the current line
+NEW      n        Insert new line after current
