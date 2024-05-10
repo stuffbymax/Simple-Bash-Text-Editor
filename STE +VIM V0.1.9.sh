@@ -118,7 +118,7 @@ echo "You are using Vim. Please use Vim commands to replace a word."
 # Function to display the about information
 display_about() {
     clear
-    echo -e "${txtgrn}Simple Text Editor +VIM${txtrst}"
+    echo -e "${txtgrn}Simple Bash editor +VIM${txtrst}"
     echo -e""
     echo -e "${txtgrn}This is a simple text editor written in Bash.${txtrst}"
 	echo -e "${txtred}The vim version is more helper tool then text editor${txtrst}"
