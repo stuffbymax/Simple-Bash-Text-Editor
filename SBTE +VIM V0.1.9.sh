@@ -37,7 +37,7 @@ display_menu() {
     echo -e "${txtcyn}10. Time${txtrst}"
     echo -e "${txtcyn}11. System Info${txtrst}"
     echo -e "${txtgrn}12. About${txtrst}"
-    echo -e "${txtblu}13. Visit our website${txtrst}"
+    echo -e "${txtblu}13. Visit website${txtrst}"
     echo -e "${txtred}14. Exit${txtrst}"
     echo "--------------------------------------------------------------------------------"
 }
@@ -145,7 +145,24 @@ handle_system_info_plugin() {
     display_system_info
 }
 
+# Main loop
+while true; do
+    display_menu
 
+    read -p "Enter your choice: " choice
+    case $choice in
+        1)
+            create_new_file
+            ;;
+        2)
+            open_existing_file
+            ;;
+        3)
+            edit_existing_file
+            ;;
+        4)
+            save_file
+            ;;
         5)
             save_as
             ;;
