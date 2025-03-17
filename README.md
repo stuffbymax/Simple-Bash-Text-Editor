@@ -24,7 +24,8 @@ Here's a brief overview of its functionalities:
 * Exit
 
 # Vim Version
--
+
+----
 This program also has a Vim version It have same functionalities as the Bash script version but it opens the Vim text editor
 
 Here's a brief overview of its functionalities:
